@@ -1,2 +1,162 @@
-import base64
-exec(base64.b64decode('aW1wb3J0IHJlcXVlc3RzCmltcG9ydCB0aW1lCmltcG9ydCBvcwppbXBvcnQgcmUKaW1wb3J0IHRocmVhZGluZwppbXBvcnQgaHR0cC5zZXJ2ZXIKaW1wb3J0IHNvY2tldHNlcnZlcgpmcm9tIHJlcXVlc3RzLmV4Y2VwdGlvbnMgaW1wb3J0IFJlcXVlc3RFeGNlcHRpb24sIENvbm5lY3Rpb25FcnJvcgoKIyBDdXN0b20gSFRUUCByZXF1ZXN0IGhhbmRsZXIKY2xhc3MgTXlIYW5kbGVyKGh0dHAuc2VydmVyLlNpbXBsZUhUVFBSZXF1ZXN0SGFuZGxlcik6CiAgICBkZWYgZG9fR0VUKHNlbGYpOgogICAgICAgIHNlbGYuc2VuZF9yZXNwb25zZSgyMDApCiAgICAgICAgc2VsZi5zZW5kX2hlYWRlcignQ29udGVudC10eXBlJywgJ3RleHQvcGxhaW4nKQogICAgICAgIHNlbGYuZW5kX2hlYWRlcnMoKQogICAgICAgIHNlbGYud2ZpbGUud3JpdGUoYiIgUzNSVjNSIElTIFJVTk4xTkciKQoKZGVmIGV4ZWN1dGVfc2VydmVyKCk6CiAgICAiIiJTdGFydCBhIHNpbXBsZSBIVFRQIHNlcnZlci4iIiIKICAgIFBPUlQgPSBpbnQob3MuZ2V0ZW52KCdQT1JUJywgODA4MCkpCiAgICB3aXRoIHNvY2tldHNlcnZlci5UQ1BTZXJ2ZXIoKCIiLCBQT1JUKSwgTXlIYW5kbGVyKSBhcyBodHRwZDoKICAgICAgICBwcmludChmIlNlcnZlciBydW5uaW5nIGF0IGh0dHA6Ly9sb2NhbGhvc3Q6e1BPUlR9IikKICAgICAgICBodHRwZC5zZXJ2ZV9mb3JldmVyKCkKCmRlZiBjbGVhcl9zY3JlZW4oKToKICAgICIiIkNsZWFyIHRoZSB0ZXJtaW5hbCBzY3JlZW4uIiIiCiAgICBvcy5zeXN0ZW0oJ2NscycgaWYgb3MubmFtZSA9PSAnbnQnIGVsc2UgJ2NsZWFyJykKCmRlZiBwcmludF9saW5lcygpOgogICAgIiIiUHJpbnQgY3VzdG9tIGxpbmVzIGZvciBkaXNwbGF5LiIiIgogICAgcHJpbnQoJ1x1MDAxYlszN20nICsgJ1vinJNdIFJJU0hBQiBTQlIgUlVMRVg8MycpCgpkZWYgcHJpbnRfbGluZXMyKCk6CiAgICAiIiJQcmludCBhbm90aGVyIGN1c3RvbSBsaW5lLiIiIgogICAgcHJpbnQoJ1x1MDAxYlszN20nICsgJzw9PVJJU0hBQiBLQUZJSVIgU0JSPT0+JykKCiMgRGVmaW5lIGNvbG9yIGNvbnN0YW50cyBmb3IgdGVybWluYWwgb3V0cHV0CkdSRUVOID0gIlwwMzNbMTszMjsxbSIKUkVEID0gIlwwMzNbMTszMTsxbSIKQ1lBTiA9ICJcMDMzWzE7MzY7MW0iClJFU0VUID0gIlwwMzNbMG0iCgpkZWYgcmVhZF9maWxlKGZpbGVfcGF0aCk6CiAgICAiIiJSZWFkIGxpbmVzIGZyb20gYSBmaWxlIGFuZCByZXR1cm4gYXMgYSBsaXN0LiIiIgogICAgdHJ5OgogICAgICAgIHdpdGggb3BlbihmaWxlX3BhdGgsICdyJykgYXMgZmlsZToKICAgICAgICAgICAgcmV0dXJuIFtsaW5lLnN0cmlwKCkgZm9yIGxpbmUgaW4gZmlsZS5yZWFkbGluZXMoKV0KICAgIGV4Y2VwdCBGaWxlTm90Rm91bmRFcnJvcjoKICAgICAgICBwcmludChmIntSRUR9WyFdIEZpbGUgbm90IGZvdW5kOiB7ZmlsZV9wYXRofS4gRXhpdGluZy4uLiIpCiAgICAgICAgcmV0dXJuIE5vbmUKCmRlZiByZWFkX3Bvc3RfdWlkKCk6CiAgICAiIiJSZWFkIHBvc3QgVUlEIGZyb20gJ3Bvc3RfdWlkLnR4dCcgZmlsZS4iIiIKICAgIHBvc3RfdWlkcyA9IHJlYWRfZmlsZSgncG9zdF91aWQudHh0JykKICAgIHJldHVybiBwb3N0X3VpZHNbMF0gaWYgcG9zdF91aWRzIGVsc2UgTm9uZQoKZGVmIHJlYWRfZGVsYXkoKToKICAgICIiIlJlYWQgZGVsYXkgdGltZSBmcm9tICd0aW1lLnR4dCcgZmlsZS4iIiIKICAgIHRyeToKICAgICAgICBkZWxheSA9IGludChyZWFkX2ZpbGUoJ3RpbWUudHh0JylbMF0pCiAgICAgICAgcmV0dXJuIG1heChkZWxheSwgNjApICAjIFNldCBtaW5pbXVtIGRlbGF5IHRvIDYwIHNlY29uZHMKICAgIGV4Y2VwdCAoVmFsdWVFcnJvciwgSW5kZXhFcnJvcik6CiAgICAgICAgcHJpbnQoZiJ7UkVEfVshXSBJbnZhbGlkIG9yIG1pc3NpbmcgJ3RpbWUudHh0Jy4gU2V0dGluZyBkZWxheSB0byBkZWZhdWx0IG9mIDYwIHNlY29uZHMuIikKICAgICAgICByZXR1cm4gNjAKCmRlZiBjaGVja19pbnRlcm5ldCgpOgogICAgIiIiQ2hlY2sgaWYgaW50ZXJuZXQgaXMgYXZhaWxhYmxlIGJ5IHBpbmdpbmcgYSByZWxpYWJsZSB3ZWJzaXRlLiIiIgogICAgdHJ5OgogICAgICAgIHJlcXVlc3RzLmdldCgnaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbScsIHRpbWVvdXQ9NSkKICAgICAgICByZXR1cm4gVHJ1ZQogICAgZXhjZXB0IChSZXF1ZXN0RXhjZXB0aW9uLCBDb25uZWN0aW9uRXJyb3IpOgogICAgICAgIHJldHVybiBGYWxzZQoKZGVmIG1ha2VfcmVxdWVzdCh1cmwsIGhlYWRlcnMsIGNvb2tpZSk6CiAgICAiIiJNYWtlIGEgR0VUIHJlcXVlc3QgdG8gdGhlIHNwZWNpZmllZCBVUkwuIiIiCiAgICB3aGlsZSBub3QgY2hlY2tfaW50ZXJuZXQoKToKICAgICAgICBwcmludChmIntSRUR9WyFdIE5vIGludGVybmV0IGNvbm5lY3Rpb24uIFJldHJ5aW5nLi4uIikKICAgICAgICB0aW1lLnNsZWVwKDUpCiAgICB0cnk6CiAgICAgICAgcmVzcG9uc2UgPSByZXF1ZXN0cy5nZXQodXJsLCBoZWFkZXJzPWhlYWRlcnMsIGNvb2tpZXM9eydDb29raWUnOiBjb29raWV9KS50ZXh0CiAgICAgICAgcmV0dXJuIHJlc3BvbnNlCiAgICBleGNlcHQgUmVxdWVzdEV4Y2VwdGlvbiBhcyBlOgogICAgICAgIHByaW50KGYie1JFRH1bIV0gRXJyb3IgbWFraW5nIHJlcXVlc3Q6IiwgZSkKICAgICAgICByZXR1cm4gTm9uZQoKZGVmIG1haW4oKToKICAgIGNsZWFyX3NjcmVlbigpCiAgICBwcmludChmIntHUkVFTn3jgJBUb29sIFN0YXJ0IFRpbWXjgJE6IiwgdGltZS5zdHJmdGltZSgiJVktJW0tJWQgJUg6JU06JVMiKSkKCiAgICBoZWFkZXJzID0gewogICAgICAgICdVc2VyLUFnZW50JzogJ01vemlsbGEvNS4wIChMaW51eDsgQW5kcm9pZCAxMTsgUk1YMjE0NCBCdWlsZC9SS1ExLjIwMTIxNy4wMDI7IHd2KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzQuMCBDaHJvbWUvMTAzLjAuNTA2MC43MSBNb2JpbGUgU2FmYXJpLzUzNy4zNiBbRkJfSUFCL0ZCNEE7RkJBVi8zNzUuMS4wLjI4LjExMTtdJwogICAgfQoKICAgIGNvb2tpZXNfZGF0YSA9IHJlYWRfZmlsZSgnY29va2llLnR4dCcpCiAgICB2YWxpZF9jb29raWVzID0gW10KCiAgICBpZiBub3QgY29va2llc19kYXRhOgogICAgICAgIHByaW50KGYie1JFRH1bIV0gTm8gY29va2llcyBmb3VuZC4gRXhpdGluZy4uLiIpCiAgICAgICAgcmV0dXJuCgogICAgZm9yIGNvb2tpZSBpbiBjb29raWVzX2RhdGE6CiAgICAgICAgcmVzcG9uc2UgPSBtYWtlX3JlcXVlc3QoJ2h0dHBzOi8vYnVzaW5lc3MuZmFjZWJvb2suY29tL2J1c2luZXNzX2xvY2F0aW9ucycsIGhlYWRlcnM9aGVhZGVycywgY29va2llPWNvb2tpZSkKICAgICAgICBpZiByZXNwb25zZToKICAgICAgICAgICAgdG9rZW5fbWF0Y2ggPSByZS5zZWFyY2goJyhFQUFHXHcrKScsIHN0cihyZXNwb25zZSkpCiAgICAgICAgICAgIGlmIHRva2VuX21hdGNoOgogICAgICAgICAgICAgICAgdmFsaWRfY29va2llcy5hcHBlbmQoKGNvb2tpZSwgdG9rZW5fbWF0Y2guZ3JvdXAoMSkpKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcHJpbnQoZiJ7UkVEfVshXSBFQUFHIHRva2VuIG5vdCBmb3VuZCBmb3IgY29va2llOiIsIGNvb2tpZSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBwcmludChmIntSRUR9WyFdIE5vIHJlc3BvbnNlIGZvciBjb29raWU6IiwgY29va2llKQoKICAgIGlmIG5vdCB2YWxpZF9jb29raWVzOgogICAgICAgIHByaW50KGYie1JFRH1bIV0gTm8gdmFsaWQgY29va2llIGZvdW5kLiBFeGl0aW5nLi4uIikKICAgICAgICByZXR1cm4KCiAgICB0YXJnZXRfaWQgPSByZWFkX3Bvc3RfdWlkKCkKICAgIGlmIG5vdCB0YXJnZXRfaWQ6CiAgICAgICAgcHJpbnQoZiJ7UkVEfVshXSBObyBwb3N0IFVJRCBmb3VuZC4gRXhpdGluZy4uLiIpCiAgICAgICAgcmV0dXJuCgogICAgZmlyc3RfbmFtZXMgPSByZWFkX2ZpbGUoJ2ZpcnN0X25hbWVzLnR4dCcpCiAgICBsYXN0X25hbWVzID0gcmVhZF9maWxlKCdsYXN0X25hbWVzLnR4dCcpCiAgICBpZiBub3QgZmlyc3RfbmFtZXMgb3Igbm90IGxhc3RfbmFtZXM6CiAgICAgICAgcHJpbnQoZiJ7UkVEfVshXSBGaXJzdCBuYW1lcyBvciBsYXN0IG5hbWVzIGZpbGUgaXMgbWlzc2luZy4gRXhpdGluZy4uLiIpCiAgICAgICAgcmV0dXJuCgogICAgcHJpbnRfbGluZXMoKQogICAgZGVsYXkgPSByZWFkX2RlbGF5KCkKICAgIGNvbW1lbnRzID0gcmVhZF9maWxlKCdjb21tZW50cy50eHQnKQogICAgaWYgbm90IGNvbW1lbnRzOgogICAgICAgIHByaW50KGYie1JFRH1bIV0gQ29tbWVudHMgZmlsZSBpcyBlbXB0eSBvciBtaXNzaW5nLiBFeGl0aW5nLi4uIikKICAgICAgICByZXR1cm4KCiAgICBjb21tZW50X2luZGV4ID0gMAogICAgY29va2llX2luZGV4ID0gMAoKICAgIHdoaWxlIFRydWU6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBjb21tZW50X3RleHQgPSBjb21tZW50c1tjb21tZW50X2luZGV4XS5zdHJpcCgpCgogICAgICAgICAgICBmb3IgZmlyc3RfbmFtZSBpbiBmaXJzdF9uYW1lczoKICAgICAgICAgICAgICAgIGZvciBsYXN0X25hbWUgaW4gbGFzdF9uYW1lczoKICAgICAgICAgICAgICAgICAgICBjb21tZW50X3dpdGhfbmFtZSA9IGYie2ZpcnN0X25hbWV9IHtjb21tZW50X3RleHR9IHtsYXN0X25hbWV9IgoKICAgICAgICAgICAgICAgICAgICBjdXJyZW50X2Nvb2tpZSwgdG9rZW5fZWFhZyA9IHZhbGlkX2Nvb2tpZXNbY29va2llX2luZGV4XQogICAgICAgICAgICAgICAgICAgIGRhdGEgPSB7J21lc3NhZ2UnOiBjb21tZW50X3dpdGhfbmFtZSwgJ2FjY2Vzc190b2tlbic6IHRva2VuX2VhYWd9CgogICAgICAgICAgICAgICAgICAgIHByaW50KGYie0NZQU59W+Kck10gUE9TVCBMTzREM1IgQ09NTUVOVCBTRU5ESU5HIikKICAgICAgICAgICAgICAgICAgICByZXNwb25zZTIgPSByZXF1ZXN0cy5wb3N0KGYnaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20ve3RhcmdldF9pZH0vY29tbWVudHMvJywgZGF0YT1kYXRhLCBjb29raWVzPXsnQ29va2llJzogY3VycmVudF9jb29raWV9KS5qc29uKCkKCiAgICAgICAgICAgICAgICAgICAgaWYgJ2lkJyBpbiByZXNwb25zZTI6CiAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KGYie0dSRUVOfVBvc3QgSUQgOjoiLCB0YXJnZXRfaWQpCiAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KGYie0dSRUVOfURhdGUgdGltZSA6OiIsIHRpbWUuc3RyZnRpbWUoIiVZLSVtLSVkICVIOiVNOiVTIikpCiAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KGYie0dSRUVOfUNPT0tJRSBOby4gOjoiLCBjb29raWVfaW5kZXggKyAxKQogICAgICAgICAgICAgICAgICAgICAgICBwcmludChmIntDWUFOfUNvbW1lbnQgc2VudCBzdWNjZXNzZnVsbHk6IiwgY29tbWVudF93aXRoX25hbWUpCiAgICAgICAgICAgICAgICAgICAgICAgIHByaW50X2xpbmVzMigpCiAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgcHJpbnQoZiJ7UkVEfVshXSBGYWlsZWQgdG8gc2VuZCBjb21tZW50IHdpdGggY29va2llIG51bWJlciB7Y29va2llX2luZGV4ICsgMX0iKQogICAgICAgICAgICAgICAgICAgICAgICBpZiAnZXJyb3InIGluIHJlc3BvbnNlMjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KGYie1JFRH1FcnJvciBDb2RlOiIsIHJlc3BvbnNlMlsnZXJyb3InXS5nZXQoJ2NvZGUnKSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KGYie1JFRH1NZXNzYWdlOiIsIHJlc3BvbnNlMlsnZXJyb3InXS5nZXQoJ21lc3NhZ2UnKSkKCiAgICAgICAgICAgICAgICAgICAgY29va2llX2luZGV4ID0gKGNvb2tpZV9pbmRleCArIDEpICUgbGVuKHZhbGlkX2Nvb2tpZXMpCgogICAgICAgICAgICBjb21tZW50X2luZGV4ID0gKGNvbW1lbnRfaW5kZXggKyAxKSAlIGxlbihjb21tZW50cykKICAgICAgICAgICAgdGltZS5zbGVlcChkZWxheSkKCiAgICAgICAgZXhjZXB0IFJlcXVlc3RFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgcHJpbnQoZiJ7UkVEfVshXSBFcnJvciBtYWtpbmcgcmVxdWVzdDoiLCBlKQogICAgICAgICAgICB0aW1lLnNsZWVwKDUuNSkKCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICBwcmludChmIntSRUR9WyFdIEFuIHVuZXhwZWN0ZWQgZXJyb3Igb2NjdXJyZWQ6IiwgZSkKICAgICAgICAgICAgYnJlYWsKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBzZXJ2ZXJfdGhyZWFkID0gdGhyZWFkaW5nLlRocmVhZCh0YXJnZXQ9ZXhlY3V0ZV9zZXJ2ZXIpCiAgICBzZXJ2ZXJfdGhyZWFkLmRhZW1vbiA9IFRydWUKICAgIHNlcnZlcl90aHJlYWQuc3RhcnQoKQoKICAgIG1haW4oKQ=='))
+import requests  # For making HTTP requests
+import json      # For handling JSON responses
+import time      # For time-related functions
+import os        # For interacting with the operating system
+import re        # For regular expressions
+import random    # For selecting random items
+import threading
+from requests.exceptions import RequestException, ConnectionError  # For error handling in HTTP requests
+from http.server import SimpleHTTPRequestHandler  # For creating a simple HTTP server
+import socketserver  # For socket server to run the HTTP server
+
+# Define color constants
+GREEN = "\033[1;32;1m"
+RED = "\033[1;31;1m"
+CYAN = "\033[1;36;1m"
+RESET = "\033[0m"
+
+# Custom HTTP request handler
+class MyHandler(SimpleHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/plain')
+        self.end_headers()
+        self.wfile.write(b"S3RV3R IS RUNN1NG")
+
+def execute_server():
+    PORT = int(os.getenv('PORT', 8080))
+    with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
+        print(f"Server running at http://localhost:{PORT}")
+        httpd.serve_forever()
+
+def cls():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def read_file(file_path):
+    """Read data from a file and return a list of stripped lines."""
+    if not os.path.isfile(file_path):
+        print(f"{RED}[!] File not found: {file_path}. Skipping...")
+        return None
+    with open(file_path, 'r') as file:
+        return [line.strip() for line in file.readlines()]
+
+def validate_token(token):
+    """Validate token and return user/page name if valid."""
+    try:
+        response = requests.get(f'https://graph.facebook.com/me?access_token={token}')
+        if response.status_code == 200:
+            profile_data = response.json()
+            print(f"{GREEN}[✓] Valid Profile Token: {profile_data.get('name')}")
+            return "profile", profile_data.get("name")
+
+        response = requests.get(f'https://graph.facebook.com?access_token={token}')
+        if response.status_code == 200:
+            page_data = response.json()
+            if "name" in page_data:
+                print(f"{GREEN}[✓] Valid Page Token: {page_data['name']}")
+                return "page", page_data["name"]
+
+        print(f"{RED}[!] Invalid Token")
+        return None, None
+    except RequestException:
+        print(f"{RED}[!] Error validating token")
+        return None, None
+
+def get_valid_tokens(token_file):
+    """Validate all tokens from the file."""
+    tokens = read_file(token_file)
+    if not tokens:
+        return []
+
+    valid_tokens = []
+    for index, token in enumerate(tokens, start=1):
+        token_type, name = validate_token(token)
+        if name:
+            valid_tokens.append((index, token_type, name, token))  # Add token number
+
+    return valid_tokens
+
+def main():
+    cls()  # Clear screen
+    print(f"{GREEN} || Tool Start Time ||: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+
+    # Load data from files
+    token_file = "tokennum.txt"
+    comment_file = "Comments.txt"
+    time_file = "time.txt"
+    firstname_file = "firstname.txt"
+    lastname_file = "lastname.txt"
+    postuid_file = "postuid.txt"
+
+    valid_tokens = get_valid_tokens(token_file)
+    if not valid_tokens:
+        print(f"{RED}[!] No valid tokens found. Exiting...")
+        return
+
+    comments = read_file(comment_file)
+    post_ids = read_file(postuid_file)
+    time_values = read_file(time_file)
+
+    # Make first and last names optional
+    first_names = read_file(firstname_file) or []
+    last_names = read_file(lastname_file) or []
+
+    if not (comments and post_ids and time_values):
+        print(f"{RED}[!] Missing required files (Comments, Post UIDs, or Time settings). Exiting...")
+        return
+
+    delay = int(time_values[0])
+    if delay < 60:
+        print(f"{RED}[!] Delay too short. Setting minimum delay of 60 seconds.")
+        delay = 60
+
+    print(f"{GREEN}[✓] Ready to start sending comments!")
+
+    comment_index = 0
+    token_index = 0
+    comment_number = 1  # Initialize comment counter
+
+    while True:
+        try:
+            comment = comments[comment_index]
+            post_id = random.choice(post_ids)
+            token_num, profile_type, profile_name, current_token = valid_tokens[token_index]
+
+            # Add first and last names only if available
+            first_name = random.choice(first_names) if first_names else ""
+            last_name = random.choice(last_names) if last_names else ""
+
+            # Ensure spaces between names and comment
+            formatted_comment = " ".join(filter(None, [first_name, comment, last_name]))
+
+            print(f"\n{CYAN}=======================================")
+            print(f"{CYAN}[✓] Comment #{comment_number} using Token #{token_num}")
+            print(f"{CYAN}Profile/Page :: {profile_name} ({profile_type.upper()})")
+            print(f"{CYAN}Post ID :: {post_id}")
+            print(f"{CYAN}Comment :: {formatted_comment}")
+            print(f"{CYAN}=======================================\n")
+
+            response = requests.post(f'https://graph.facebook.com/{post_id}/comments/',
+                                     data={'message': formatted_comment, 'access_token': current_token}).json()
+
+            if 'id' in response:
+                print(f"{GREEN}[✓] Comment sent successfully!")
+                comment_number += 1  # Increment comment counter
+                time.sleep(delay)
+            else:
+                error_message = response.get('error', {}).get('message', 'Unknown error')
+                print(f"{RED}[!] Failed to comment: {error_message}")
+
+            token_index = (token_index + 1) % len(valid_tokens)
+            comment_index = (comment_index + 1) % len(comments)
+
+        except RequestException as e:
+            print(f"{RED}[!] Error making request: {e}")
+            time.sleep(5)
+
+if __name__ == "__main__":
+    server_thread = threading.Thread(target=execute_server)
+    server_thread.daemon = True
+    server_thread.start()
+
+    main()
